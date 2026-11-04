@@ -4,7 +4,7 @@ Theme URI:
 Author: Cantareira Design
 Author URI: 
 Description: Tema premium desenvolvido exclusivamente para o e-commerce do Orquidário Cantareira. Apresenta design orgânico, elegante e elementos de glassmorphism.
-Version: 1.0.0
+Version: 1.1.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: orquidario-cantareira
@@ -12,3 +12,81 @@ Tags: e-commerce, custom, woocommerce, premium, glassmorphism
 */
 
 /* O design foi migrado para Tailwind CSS (Glassmorphism V1). */
+
+/* Acessibilidade WCAG 2.1 / 2.2: Foco Visível e Navegação por Teclado */
+:focus-visible {
+    outline: 2px solid #2A4A35 !important;
+    outline-offset: 3px !important;
+}
+
+/* Proteção de contraste para containers escuros */
+#clube-home p,
+#clube-home span,
+#colophon p {
+    color: #FFFFFF !important;
+}
+
+#clube-home .text-\[\#E8DCC4\] {
+    color: #E8DCC4 !important;
+}
+
+/* WooCommerce My Account: Layout Robusto e Anti-Quebra */
+.woocommerce-account .woocommerce {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+    max-width: 80rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-top: 2rem !important;
+    margin-bottom: 4rem !important;
+    float: none !important;
+    width: 100% !important;
+    align-items: flex-start !important;
+}
+
+@media (min-width: 1024px) {
+    .woocommerce-account .woocommerce {
+        flex-direction: row !important;
+        gap: 3rem !important;
+    }
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 100% !important;
+    float: none !important;
+    flex-shrink: 0 !important;
+}
+
+@media (min-width: 1024px) {
+    .woocommerce-account .woocommerce-MyAccount-navigation {
+        width: 20rem !important;
+        max-width: 20rem !important;
+    }
+}
+
+.woocommerce-account .woocommerce-MyAccount-content {
+    width: 100% !important;
+    float: none !important;
+    flex: 1 1 0% !important;
+    min-width: 0 !important;
+}
+
+details > summary:focus-visible {
+    outline: 2px solid #2A4A35 !important;
+    outline-offset: 4px !important;
+    border-radius: 0.75rem;
+}
+
+/* Utilitário para Leitores de Tela */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

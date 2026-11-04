@@ -9,13 +9,13 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Lato:wght@400;700;900&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://gzr-dex.github.io/orquidario-cantareira-preview/style.css">
+<link rel="stylesheet" href="https://gzr-dex.github.io/orquidario-cantareira-preview/style.css?v=1793821027">
 <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 <style type="text/tailwindcss">
     @theme {
       --color-brand-bg: #F5F4F0;
       --color-brand-green: #2A4A35;
-      --color-brand-gold: #927543;
+      --color-brand-gold: #7D6336;
       --color-brand-text: #1F2937;
       --color-brand-lightbg: #FFFFFF;
       --color-brand-footerbg: #213A29;
@@ -29,7 +29,8 @@
     }
     :root { background-color: var(--color-brand-bg); color: var(--color-brand-text); }
     body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: var(--color-brand-bg); color: #1F2937; font-weight: 500; }
-    p { color: #1F2937; font-weight: 500; }
+    #clube-home p, #clube-home span, #colophon p { color: #FFFFFF !important; }
+    #clube-home .text-\[\#E8DCC4\] { color: #E8DCC4 !important; }
     /* Glassmorphism Containers */
 .woocommerce-cart .woocommerce,
 .woocommerce-checkout .woocommerce {
@@ -89,7 +90,7 @@
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), rgba(165, 139, 92, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), rgba(146, 117, 67, 0.4), transparent);
     pointer-events: none;
     z-index: 1;
 }
@@ -172,7 +173,7 @@
     left: 0;
     width: 50%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), rgba(165, 139, 92, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), rgba(146, 117, 67, 0.4), transparent);
     pointer-events: none;
     z-index: 1;
 }
@@ -293,8 +294,8 @@
 }
 .woocommerce ul.products::-webkit-scrollbar { height: 6px; }
 .woocommerce ul.products::-webkit-scrollbar-track { background: transparent; }
-.woocommerce ul.products::-webkit-scrollbar-thumb { background: rgba(165,139,92,0.3); border-radius: 10px; }
-.woocommerce ul.products::-webkit-scrollbar-thumb:hover { background: rgba(165,139,92,0.6); }
+.woocommerce ul.products::-webkit-scrollbar-thumb { background: rgba(146,117,67,0.3); border-radius: 10px; }
+.woocommerce ul.products::-webkit-scrollbar-thumb:hover { background: rgba(146,117,67,0.6); }
 .woocommerce ul.products::before,
 .woocommerce ul.products::after {
     display: none !important;
@@ -314,13 +315,13 @@
 }
 .woocommerce ul.products li.product h2,
 .woocommerce ul.products li.product .woocommerce-loop-product__title {
-    @apply text-sm md:text-base font-serif text-brand-green mb-1 px-4 hover:text-brand-gold transition-colors line-clamp-2;
+    @apply text-sm md:text-base font-serif text-brand-green mb-1 px-4 hover:text-[#7D6336] transition-colors line-clamp-2;
 }
 .woocommerce ul.products li.product .price {
     @apply text-xs md:text-sm font-bold text-brand-text mb-4 px-4 block;
 }
 .woocommerce ul.products li.product a.button {
-    @apply block w-[calc(100%-2rem)] mx-auto mt-auto text-center bg-transparent border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-[10px] md:text-xs font-bold uppercase tracking-widest py-3 md:py-3 rounded transition-colors;
+    @apply block w-[calc(100%-2rem)] mx-auto mt-auto text-center bg-transparent border border-brand-green text-brand-green hover:bg-brand-green hover:text-white text-xs font-bold uppercase tracking-widest py-3 rounded transition-colors;
 }
 
 /* ====================================================================
@@ -344,32 +345,35 @@
 /* Ajuste do texto de política de privacidade */
 .woocommerce form.register p,
 .woocommerce form.register .woocommerce-privacy-policy-text {
-    @apply text-sm text-brand-text leading-relaxed mt-4 mb-6 font-light;
+    @apply text-sm text-brand-text leading-relaxed mt-4 mb-6 font-normal;
 }
 /* Estilizar os botões "Acessar" e "Cadastre-se" para ocuparem 100% da largura e ficarem elegantes */
 .woocommerce form.login button[type="submit"],
 .woocommerce form.register button[type="submit"] {
-    @apply w-full bg-brand-green text-white px-8 py-4 rounded-xl font-sans uppercase tracking-wider text-xs hover:bg-brand-gold transition-colors duration-300 shadow-md border-none cursor-pointer mt-4;
+    @apply w-full bg-brand-green text-white px-8 py-4 rounded-xl font-sans uppercase tracking-wider text-xs hover:bg-brand-gold transition-colors duration-300 shadow-md border-none cursor-pointer mt-4 min-h-[44px];
 }
 /* Ajuste do checkbox "Lembre-me" */
 .woocommerce form.login .woocommerce-form-login__rememberme {
-    @apply flex items-center justify-center gap-2 text-xs text-brand-text opacity-70 mt-6 mb-4 cursor-pointer;
+    @apply flex items-center justify-center gap-2 text-xs font-medium text-brand-text mt-6 mb-4 cursor-pointer;
 }
 /* Ajuste do link "Perdeu a senha?" */
 .woocommerce form.login .woocommerce-LostPassword {
-    @apply block w-full text-center mt-2 text-xs text-brand-text opacity-60 hover:text-brand-gold transition-colors underline;
+    @apply block w-full text-center mt-2 text-xs font-semibold text-brand-green hover:text-[#7D6336] transition-colors underline;
 }
 .woocommerce-account .woocommerce {
-    @apply flex flex-col lg:flex-row gap-8 lg:gap-12 max-w-7xl mx-auto mt-8 lg:mt-12 mb-16;
+    @apply !flex !flex-col lg:!flex-row !gap-8 lg:!gap-12 max-w-7xl mx-auto mt-8 lg:mt-12 mb-16 !float-none !w-full !items-start;
 }
 .woocommerce-MyAccount-navigation {
-    @apply w-full lg:w-1/4 bg-white/40 backdrop-blur-md md:backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(42,74,53,0.08)] rounded-[2rem] p-6 self-start;
+    @apply !w-full lg:!w-80 lg:!shrink-0 bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(42,74,53,0.08)] rounded-[2rem] p-6 lg:p-8 self-start !float-none;
 }
 .woocommerce-MyAccount-navigation ul {
-    @apply flex flex-col m-0 p-0 list-none gap-2;
+    @apply flex flex-col m-0 p-0 list-none gap-2 w-full;
+}
+.woocommerce-MyAccount-navigation ul li {
+    @apply w-full !float-none m-0 p-0 border-none;
 }
 .woocommerce-MyAccount-content {
-    @apply w-full lg:w-3/4 bg-white/40 backdrop-blur-md md:backdrop-blur-2xl border border-white/80 shadow-[0_8px_32px_rgba(42,74,53,0.08)] rounded-[2rem] p-6 lg:p-10 text-brand-text/80;
+    @apply !w-full lg:!flex-1 bg-white/60 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(42,74,53,0.08)] rounded-[2rem] p-6 lg:p-10 text-brand-text !float-none min-w-0;
 }
 
 /* ====================================================================
@@ -389,7 +393,7 @@
 .woocommerce-message a.button, 
 .woocommerce-error a.button, 
 .woocommerce-info a.button {
-    @apply bg-brand-green text-white px-6 py-2 rounded-full font-sans uppercase tracking-wider text-[10px] hover:bg-brand-gold transition-colors duration-300 shadow-sm border-none m-0 whitespace-nowrap;
+    @apply bg-brand-green text-white px-6 py-2.5 rounded-full font-sans uppercase tracking-wider text-xs hover:bg-[#7D6336] transition-colors duration-300 shadow-sm border-none m-0 whitespace-nowrap min-h-[44px] inline-flex items-center justify-center;
 }
 .woocommerce-MyAccount-content h2, 
 .woocommerce-MyAccount-content h3 {
@@ -461,7 +465,7 @@
 .mp-checkout-form input:focus,
 #stripe-payment-data input:focus,
 .select2-container--default.select2-container--open .select2-selection--single {
-    @apply !bg-white !border-brand-gold !outline-none !shadow-[0_0_0_3px_rgba(165,139,92,0.15)];
+    @apply !bg-white !border-brand-gold !outline-none !shadow-[0_0_0_3px_rgba(146,117,67,0.15)];
 }
 .mp-checkout-form button,
 #stripe-payment-data button,
@@ -481,7 +485,7 @@
         <span class="w-2 h-2 rounded-full bg-brand-gold animate-pulse shrink-0"></span>
         <span class="text-white/95 tracking-normal">Enviamos orquídeas e baunilhas com segurança para todo o Brasil</span>
       </div>
-      <a href="https://wa.me/5511921899009?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20as%20plantas." target="_blank" rel="noopener noreferrer" class="bg-brand-gold hover:bg-white text-white hover:text-brand-green px-3.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider transition-all shadow-sm flex items-center gap-1.5 shrink-0">
+      <a href="https://wa.me/5511921899009?text=Ol%C3%A1%2C%20gostaria%20de%20tirar%20uma%20d%C3%BAvida%20sobre%20as%20plantas." target="_blank" rel="noopener noreferrer" class="bg-[#7D6336] hover:bg-white text-white hover:text-brand-green px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all shadow-sm flex items-center gap-1.5 shrink-0">
         <i class="fab fa-whatsapp text-xs"></i>
         <span>Atendimento pelo WhatsApp: (11) 92189-9009</span>
       </a>
@@ -492,16 +496,16 @@
         <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/" class="flex items-center gap-3.5 hover:opacity-85 transition-opacity group">
           <img src="https://gzr-dex.github.io/orquidario-cantareira-preview/assets/images/logo.jpg" alt="Orquidário Cantareira" class="w-14 h-14 rounded-full object-cover shadow-sm border border-brand-gold/30 group-hover:scale-105 transition-transform" />          <div class="hidden sm:flex flex-col justify-center">
               <span class="font-serif text-2xl lg:text-[1.65rem] font-bold text-brand-green leading-none">Orquidário</span>
-              <span class="font-sans text-[12px] font-bold tracking-[0.25em] text-brand-gold uppercase mt-1">Cantareira</span>
+              <span class="font-sans text-[12px] font-bold tracking-[0.25em] text-[#725A2F] uppercase mt-1">Cantareira</span>
           </div>
         </a>
       </div>
       
-      <nav class="hidden xl:flex space-x-4 2xl:space-x-6 text-[11px] lg:text-[11.5px] font-semibold uppercase tracking-[0.06em] text-brand-green/90 items-center">
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-botanica" class="hover:text-brand-gold transition-colors">Coleção Botânica</a>
+      <nav class="hidden xl:flex space-x-4 2xl:space-x-6 text-[13px] font-semibold uppercase tracking-[0.06em] text-brand-green items-center">
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-botanica" class="hover:text-[#7D6336] transition-colors">Coleção Botânica</a>
         
         <div class="group relative py-3">
-          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=sabores-da-serra" class="hover:text-brand-gold transition-colors flex items-center gap-1">
+          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=sabores-da-serra" class="hover:text-[#7D6336] transition-colors flex items-center gap-1">
             Baunilhas da Serra
             <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
           </a>
@@ -511,10 +515,10 @@
             <div class="flex flex-col space-y-4">
               <h4 class="font-sans text-brand-green font-bold text-base border-b border-brand-green/15 pb-2 tracking-tight">Gastronomia & Bem-estar</h4>
               <ul class="flex flex-col space-y-3 font-sans text-sm font-semibold text-brand-text">
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=favas-extratos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Favas & Extratos</span> <span class="text-[11px] font-bold uppercase tracking-wider text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded">Culinária</span></a></li>
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=acucar-pos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Açúcar & Pós</span> <span class="text-[11px] font-bold uppercase tracking-wider text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded">Culinária</span></a></li>
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=velas-incensos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Velas & Incensos</span> <span class="text-[11px] font-bold uppercase tracking-wider text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded">Aromas</span></a></li>
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cuidados-sabonetes" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Sabonetes & Hidratantes</span> <span class="text-[11px] font-bold uppercase tracking-wider text-brand-gold bg-brand-gold/10 px-2 py-0.5 rounded">Cuidados</span></a></li>
+                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=favas-extratos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Favas & Extratos</span> <span class="text-xs font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Culinária</span></a></li>
+                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=acucar-pos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Açúcar & Pós</span> <span class="text-xs font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Culinária</span></a></li>
+                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=velas-incensos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Velas & Incensos</span> <span class="text-xs font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Aromas</span></a></li>
+                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cuidados-sabonetes" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Sabonetes & Hidratantes</span> <span class="text-xs font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Cuidados</span></a></li>
               </ul>
             </div>
             
@@ -534,11 +538,11 @@
           </div>
         </div>
 
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=aromas-da-serra" class="hover:text-brand-gold transition-colors">Aromas da Serra</a>
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cultivo-insumos" class="hover:text-brand-gold transition-colors">Cultivo & Insumos</a>
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-orquidario" class="hover:text-brand-gold transition-colors">Coleção Orquidário</a>
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=aromas-da-serra" class="hover:text-[#7D6336] transition-colors">Aromas da Serra</a>
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cultivo-insumos" class="hover:text-[#7D6336] transition-colors">Cultivo & Insumos</a>
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-orquidario" class="hover:text-[#7D6336] transition-colors">Coleção Orquidário</a>
         <div class="group relative py-4">
-          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="hover:text-brand-gold transition-colors flex items-center gap-1.5">
+          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="hover:text-[#7D6336] transition-colors flex items-center gap-1.5">
             Clube do Orquidário
             <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M19 9l-7 7-7-7"></path></svg>
           </a>
@@ -578,45 +582,46 @@
             </div>
           </div>
         </div>
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-brand-gold transition-colors">Jardim do Conhecimento</a>
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/nossa-historia/" class="hover:text-brand-gold transition-colors">Sobre Nós</a>
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-[#7D6336] transition-colors">Jardim do Conhecimento</a>
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/nossa-historia/" class="hover:text-[#7D6336] transition-colors">Sobre Nós</a>
       </nav>
 
-      <div class="flex space-x-5 text-brand-green items-center">
+      <div class="flex space-x-2 text-brand-green items-center">
         <!-- Search -->
         <div class="relative" id="search-container">
-          <button id="search-btn-toggle" aria-label="Pesquisar" class="text-brand-green hover:text-brand-gold transition-colors focus:outline-none flex items-center p-1 cursor-pointer">
+          <button id="search-btn-toggle" aria-label="Pesquisar no catálogo" aria-expanded="false" class="text-brand-green hover:text-[#7D6336] transition-colors focus:outline-none flex items-center justify-center w-11 h-11 p-2.5 rounded-full cursor-pointer">
             <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           </button>
           <div id="search-dropdown" class="hidden absolute right-0 top-full mt-3 w-80 bg-white border border-brand-green/20 shadow-[0_15px_40px_rgba(0,0,0,0.15)] rounded-2xl p-4 z-50">
             <form role="search" method="get" action="https://gzr-dex.github.io/orquidario-cantareira-preview/" class="flex items-center gap-2">
-              <input type="search" name="s" placeholder="Buscar no viveiro..." class="w-full text-sm bg-brand-bg/60 border border-brand-green/20 focus:border-brand-green rounded-lg px-3 py-2 text-brand-text outline-none" required />
-              <button type="submit" class="text-xs bg-brand-green text-white px-4 py-2 rounded-lg hover:bg-brand-gold transition-colors font-bold uppercase tracking-wider cursor-pointer">Buscar</button>
+              <label for="header-search-input" class="sr-only">Buscar no viveiro</label>
+              <input id="header-search-input" type="search" name="s" placeholder="Buscar no viveiro..." class="w-full text-sm bg-brand-bg/60 border border-[#7A9A84] focus:border-brand-green rounded-lg px-3 py-2 text-brand-text outline-none" required />
+              <button type="submit" class="text-xs bg-brand-green text-white px-4 py-2 rounded-lg hover:bg-[#7D6336] transition-colors font-bold uppercase tracking-wider cursor-pointer min-h-[36px]">Buscar</button>
             </form>
           </div>
         </div>
         <!-- Account -->
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/" aria-label="Minha Conta" class="p-1 hover:text-brand-gold transition-colors">
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/" aria-label="Minha Conta" class="w-11 h-11 flex items-center justify-center p-2.5 rounded-full hover:text-[#7D6336] transition-colors">
           <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
         </a>
         <!-- Cart: Shopping Cart Icon -->
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/" aria-label="Carrinho de Compras" class="relative group p-1 hover:text-brand-gold transition-colors">
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/" aria-label="Carrinho de Compras" class="relative group w-11 h-11 flex items-center justify-center p-2.5 rounded-full hover:text-[#7D6336] transition-colors">
           <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
           </svg>
                   </a>
         <!-- Mobile Menu Toggle -->
-        <button id="mobile-menu-toggle" class="lg:hidden w-6 h-6 flex flex-col justify-center items-center gap-1.5 cursor-pointer hover:text-brand-gold transition-colors" aria-label="Menu">
-          <span class="block w-full h-[2px] bg-current rounded-full"></span>
-          <span class="block w-full h-[2px] bg-current rounded-full"></span>
-          <span class="block w-full h-[2px] bg-current rounded-full"></span>
+        <button id="mobile-menu-toggle" class="lg:hidden w-11 h-11 flex flex-col justify-center items-center gap-1.5 cursor-pointer hover:text-[#7D6336] transition-colors p-2" aria-label="Abrir Menu Principal" aria-expanded="false">
+          <span class="block w-6 h-[2px] bg-current rounded-full"></span>
+          <span class="block w-6 h-[2px] bg-current rounded-full"></span>
+          <span class="block w-6 h-[2px] bg-current rounded-full"></span>
         </button>
       </div>
     </header>
 
     <!-- Mobile Menu Panel -->
     <div id="mobile-menu" class="fixed inset-0 bg-brand-bg/95 backdrop-blur-md md:backdrop-blur-3xl z-[100] transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center p-8 lg:hidden">
-        <button id="close-mobile-menu" class="absolute top-6 right-8 text-brand-green hover:text-brand-gold transition-colors" aria-label="Fechar Menu">
+        <button id="close-mobile-menu" class="absolute top-6 right-8 w-11 h-11 flex items-center justify-center text-brand-green hover:text-[#7D6336] transition-colors" aria-label="Fechar Menu">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
         <nav class="flex flex-col space-y-6 text-center text-base font-bold uppercase tracking-wider text-brand-green">
@@ -668,78 +673,78 @@
 
             <div class="w-full relative z-20">
                 <div class="woocommerce"><div class="flex flex-col lg:flex-row gap-8 max-w-6xl mx-auto"><div class="w-full lg:w-1/3 bg-white/45 backdrop-blur-xl border border-white/60 shadow-[0_15px_40px_rgba(42,74,53,0.08)] rounded-[2rem] p-6 h-fit">
-<nav class="woocommerce-MyAccount-navigation" aria-label="Account pages">
+<nav class="woocommerce-MyAccount-navigation w-full lg:w-80 lg:shrink-0 bg-white/70 backdrop-blur-xl border border-white/80 shadow-[0_8px_32px_rgba(42,74,53,0.08)] rounded-[2rem] p-6 lg:p-8 self-start !float-none" aria-label="Account pages">
     
     <!-- Perfil do Usuário -->
-    <div class="mb-6 pb-6 border-b border-brand-green/10 flex flex-col items-center">
+    <div class="mb-6 pb-6 border-b border-brand-green/10 flex flex-col items-center text-center">
         <div class="relative mb-3">
-            <div class="w-20 h-20 rounded-full p-1 border-2 border-brand-green/30 relative z-10 bg-white">
+            <div class="w-20 h-20 rounded-full p-1 border-2 border-brand-green/30 relative z-10 bg-white shadow-sm">
                 <img src="https://gzr-dex.github.io/orquidario-cantareira-preview/assets/images/logo.jpg" alt="Avatar" class="w-full h-full object-cover rounded-full">
             </div>
             <!-- Decoração Glassmorphism -->
             <div class="absolute -inset-2 bg-brand-gold/20 blur-xl rounded-full z-0"></div>
         </div>
-        <h3 class="font-serif text-brand-green text-2xl m-0">Olá, Gabriel</h3>
-        <span class="inline-block mt-2 px-3 py-1 bg-brand-green/10 text-brand-green text-[10px] font-bold uppercase tracking-widest rounded-full">
+        <h3 class="font-serif text-brand-green text-xl font-bold m-0">Olá, Gabriel</h3>
+        <span class="inline-block mt-2 px-3.5 py-1 bg-brand-green/10 text-brand-green text-xs font-bold uppercase tracking-wider rounded-full whitespace-nowrap">
             Membro do Clube
         </span>
     </div>
 
-	<ul class="flex flex-col m-0 p-0 list-none gap-2">
-					<li class="border-0 m-0">
+	<ul class="flex flex-col m-0 p-0 list-none gap-2 w-full">
+					<li class="border-0 m-0 w-full !float-none">
 				<a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/" 
-                   class="group flex items-center gap-3 px-6 py-4 text-brand-text font-bold uppercase tracking-widest text-[10px] lg:text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-colors "
+                   class="group flex items-center gap-3 px-4 py-3 text-brand-text font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-all w-full box-border whitespace-nowrap "
                    >
 					
-                    <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>                    <span class="">Painel</span>
+                    <svg class="w-5 h-5 shrink-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>                    <span class="">Painel</span>
 				</a>
 			</li>
-					<li class="border-0 m-0">
+					<li class="border-0 m-0 w-full !float-none">
 				<a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/orders/" 
-                   class="group flex items-center gap-3 px-6 py-4 text-brand-text font-bold uppercase tracking-widest text-[10px] lg:text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-colors "
+                   class="group flex items-center gap-3 px-4 py-3 text-brand-text font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-all w-full box-border whitespace-nowrap "
                    >
 					
-                    <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>                    <span class="">Pedidos</span>
+                    <svg class="w-5 h-5 shrink-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path></svg>                    <span class="">Pedidos</span>
 				</a>
 			</li>
-					<li class="border-0 m-0">
+					<li class="border-0 m-0 w-full !float-none">
 				<a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/minha-assinatura/" 
-                   class="group flex items-center gap-3 px-6 py-4 text-brand-text font-bold uppercase tracking-widest text-[10px] lg:text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-colors "
+                   class="group flex items-center gap-3 px-4 py-3 text-brand-text font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-all w-full box-border whitespace-nowrap "
                    >
 					
-                    <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>                    <span class="">Minha assinatura</span>
+                    <svg class="w-5 h-5 shrink-0 transition-opacity text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>                    <span class="">Minha assinatura</span>
 				</a>
 			</li>
-					<li class="border-0 m-0">
+					<li class="border-0 m-0 w-full !float-none">
 				<a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/edit-address/" 
-                   class="group flex items-center gap-3 px-6 py-4 text-brand-text font-bold uppercase tracking-widest text-[10px] lg:text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-colors bg-brand-green text-white shadow-md pointer-events-none"
+                   class="group flex items-center gap-3 px-4 py-3 text-brand-text font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-all w-full box-border whitespace-nowrap !bg-brand-green !text-white shadow-md pointer-events-none"
                    aria-current="page">
 					
-                    <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>                    <span class="text-white">Preferências</span>
+                    <svg class="w-5 h-5 shrink-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>                    <span class="text-white">Preferências</span>
 				</a>
 			</li>
-					<li class="border-0 m-0">
+					<li class="border-0 m-0 w-full !float-none">
 				<a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/pausar-alterar/" 
-                   class="group flex items-center gap-3 px-6 py-4 text-brand-text font-bold uppercase tracking-widest text-[10px] lg:text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-colors "
+                   class="group flex items-center gap-3 px-4 py-3 text-brand-text font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-all w-full box-border whitespace-nowrap "
                    >
 					
-                    <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>                    <span class="">Pausar / Alterar</span>
+                    <svg class="w-5 h-5 shrink-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 9v6m4-6v6m7-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>                    <span class="">Pausar / Alterar</span>
 				</a>
 			</li>
-					<li class="border-0 m-0">
+					<li class="border-0 m-0 w-full !float-none">
 				<a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/edit-account/" 
-                   class="group flex items-center gap-3 px-6 py-4 text-brand-text font-bold uppercase tracking-widest text-[10px] lg:text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-colors "
+                   class="group flex items-center gap-3 px-4 py-3 text-brand-text font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-all w-full box-border whitespace-nowrap "
                    >
 					
-                    <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>                    <span class="">Detalhes da conta</span>
+                    <svg class="w-5 h-5 shrink-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>                    <span class="">Detalhes da conta</span>
 				</a>
 			</li>
-					<li class="border-0 m-0">
+					<li class="border-0 m-0 w-full !float-none">
 				<a href="https://gzr-dex.github.io/orquidario-cantareira-preview/" 
-                   class="group flex items-center gap-3 px-6 py-4 text-brand-text font-bold uppercase tracking-widest text-[10px] lg:text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-colors "
+                   class="group flex items-center gap-3 px-4 py-3 text-brand-text font-bold uppercase tracking-wider text-xs rounded-xl hover:bg-brand-green/10 hover:text-brand-green transition-all w-full box-border whitespace-nowrap "
                    >
 					
-                    <svg class="w-5 h-5 opacity-70 group-hover:opacity-100 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                    <span class="">Sair</span>
+                    <svg class="w-5 h-5 shrink-0 transition-opacity" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path></svg>                    <span class="">Sair</span>
 				</a>
 			</li>
 			</ul>
@@ -760,7 +765,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Envios para todo o Brasil</h4>
-            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Embalagem especializada para plantas vivas.</p>
+            <p class="text-sm font-medium text-brand-text mt-1 leading-snug">Embalagem especializada para plantas vivas.</p>
           </div>
         </div>
 
@@ -770,7 +775,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Embalagem Cuidadosa</h4>
-            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Raízes protegidas e hidratação garantida.</p>
+            <p class="text-sm font-medium text-brand-text mt-1 leading-snug">Raízes protegidas e hidratação garantida.</p>
           </div>
         </div>
 
@@ -780,7 +785,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Plantas Selecionadas</h4>
-            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Espécimes saudáveis e com procedência botânica.</p>
+            <p class="text-sm font-medium text-brand-text mt-1 leading-snug">Espécimes saudáveis e com procedência botânica.</p>
           </div>
         </div>
 
@@ -790,7 +795,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Atendimento Próximo</h4>
-            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Suporte direto pelo WhatsApp antes e após o plantio.</p>
+            <p class="text-sm font-medium text-brand-text mt-1 leading-snug">Suporte direto pelo WhatsApp antes e após o plantio.</p>
           </div>
         </div>
 
@@ -800,7 +805,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Compra Segura</h4>
-            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Pagamento protegido e garantia de entrega viva.</p>
+            <p class="text-sm font-medium text-brand-text mt-1 leading-snug">Pagamento protegido e garantia de entrega viva.</p>
           </div>
         </div>
 
@@ -815,12 +820,13 @@
         <div class="max-w-xl text-center lg:text-left">
           <span class="text-[#E8DCC4] text-xs uppercase tracking-[0.25em] font-bold block mb-2">Comunidade Botânica</span>
           <h3 class="text-2xl md:text-3xl font-serif text-white font-bold mb-2">Receba as novidades da Serra</h3>
-          <p class="text-sm text-white font-medium leading-relaxed">Novas plantas, florações raras, lançamentos gastronômicos e histórias do viveiro direto no seu e-mail.</p>
+          <p class="text-sm !text-white font-medium leading-relaxed">Novas plantas, florações raras, lançamentos gastronômicos e histórias do viveiro direto no seu e-mail.</p>
         </div>
         
         <form action="#" method="post" class="flex flex-col sm:flex-row w-full lg:w-auto gap-2.5">
-          <input type="email" placeholder="Digite seu melhor e-mail" required class="px-4 py-3.5 bg-white text-[#1F2937] placeholder-gray-500 rounded-lg text-sm w-full sm:w-80 focus:outline-none focus:ring-2 focus:ring-brand-gold shadow-sm font-semibold" />
-          <button type="submit" class="bg-brand-gold hover:bg-white text-white hover:text-brand-green font-bold text-xs uppercase tracking-widest px-7 py-3.5 rounded-lg transition-all shadow-md cursor-pointer shrink-0">Cadastrar</button>
+          <label for="footer-newsletter-email" class="sr-only">Digite seu melhor e-mail para receber as novidades da Serra</label>
+          <input id="footer-newsletter-email" type="email" placeholder="Digite seu melhor e-mail" aria-label="Digite seu melhor e-mail para novidades" required class="px-4 py-3.5 bg-white text-[#1F2937] placeholder-gray-500 rounded-lg text-sm w-full sm:w-80 focus:outline-none focus:ring-2 focus:ring-[#7D6336] shadow-sm font-semibold" />
+          <button type="submit" class="bg-[#7D6336] hover:bg-white text-white hover:text-brand-green font-bold text-xs uppercase tracking-widest px-7 py-3.5 rounded-lg transition-all shadow-md cursor-pointer shrink-0 min-h-[44px]">Cadastrar</button>
         </form>
       </div>
 
@@ -833,13 +839,13 @@
             <span class="font-serif text-2xl font-bold text-white">Orquidário</span>
             <span class="font-sans text-xs tracking-[0.25em] text-[#E8DCC4] uppercase font-bold">Cantareira</span>
           </div>
-          <p class="text-sm text-white font-medium leading-relaxed mb-6">
+          <p class="text-sm !text-white font-medium leading-relaxed mb-6">
             Mais que plantas, cultivamos conexões. Um refúgio botânico dedicado a orquídeas raras, baunilhas de verdade e aromas para pequenos rituais.
           </p>
           <div class="flex items-center gap-3">
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-gold text-white hover:text-brand-green flex items-center justify-center transition-all text-sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/5511921899009" target="_blank" rel="noopener noreferrer" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-gold text-white hover:text-brand-green flex items-center justify-center transition-all text-sm" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            <a href="mailto:Orquidariocantareira@gmail.com" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-gold text-white hover:text-brand-green flex items-center justify-center transition-all text-sm" aria-label="E-mail"><i class="far fa-envelope"></i></a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-white/10 hover:bg-[#7D6336] text-white hover:text-white flex items-center justify-center transition-all text-base" aria-label="Acessar nosso Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/5511921899009" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-full bg-white/10 hover:bg-[#7D6336] text-white hover:text-white flex items-center justify-center transition-all text-base" aria-label="Falar conosco pelo WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="mailto:Orquidariocantareira@gmail.com" class="w-11 h-11 rounded-full bg-white/10 hover:bg-[#7D6336] text-white hover:text-white flex items-center justify-center transition-all text-base" aria-label="Enviar um e-mail"><i class="far fa-envelope"></i></a>
           </div>
         </div>
 
