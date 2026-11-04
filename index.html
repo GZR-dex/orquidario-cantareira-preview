@@ -1269,60 +1269,268 @@
 
 
       <!-- ==========================================
-           BLOCO 12: DEPOIMENTOS (Prova Social Limpa)
+           BLOCO 12: DEPOIMENTOS NO GOOGLE (Carrossel de Prova Social)
            ========================================== -->
-      <section id="depoimentos" class="py-20 px-6 md:px-12 lg:px-24 relative z-20">
+      <section id="depoimentos" class="py-20 px-6 md:px-12 lg:px-24 relative z-20 overflow-hidden">
         <div class="max-w-[1400px] mx-auto">
             
-            <div class="text-center max-w-xl mx-auto mb-14">
-                <span class="text-brand-gold text-xs uppercase tracking-[0.25em] font-bold mb-2 block">Depoimentos Reais</span>
-                <h2 class="text-3xl md:text-4xl font-serif text-brand-green">Quem cultiva conosco</h2>
+            <!-- Cabeçalho com Selo Oficial do Google e Controles -->
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 gap-6">
+                <div>
+                    <span class="text-brand-gold text-xs uppercase tracking-[0.25em] font-bold mb-2 block">Avaliações Verificadas</span>
+                    <h2 class="text-3xl md:text-4xl font-serif text-brand-green font-bold">Quem cultiva conosco</h2>
+                    <p class="text-brand-text text-sm md:text-base mt-1 font-normal">Opiniões espontâneas deixadas por quem visita o viveiro e recebe nossas plantas em todo o Brasil.</p>
+                </div>
+
+                <!-- Google Rating Badge & Setas do Carrossel -->
+                <div class="flex flex-wrap items-center gap-4 sm:gap-6 self-stretch sm:self-auto justify-between sm:justify-end">
+                    <!-- Badge Google -->
+                    <div class="bg-white border border-brand-green/15 rounded-2xl px-5 py-3 shadow-sm flex items-center gap-3.5">
+                        <!-- Google "G" Icon -->
+                        <div class="w-8 h-8 rounded-full bg-white shadow-sm border border-gray-100 flex items-center justify-center shrink-0">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24">
+                                <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                                <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+                            </svg>
+                        </div>
+                        <div class="flex flex-col">
+                            <div class="flex items-center gap-1.5">
+                                <span class="font-bold text-lg text-brand-green leading-none">5,0</span>
+                                <div class="flex text-[#F59E0B] text-xs">
+                                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <span class="text-[11px] font-semibold text-brand-text/80">66 avaliações no Google</span>
+                        </div>
+                    </div>
+
+                    <!-- Botões de Navegação -->
+                    <div class="flex items-center gap-2">
+                        <button id="google-reviews-prev" aria-label="Avaliação anterior" class="w-11 h-11 rounded-full bg-white border border-brand-green/20 text-brand-green hover:bg-brand-green hover:text-white transition-all shadow-sm flex items-center justify-center cursor-pointer">
+                            <i class="fas fa-chevron-left text-sm"></i>
+                        </button>
+                        <button id="google-reviews-next" aria-label="Próxima avaliação" class="w-11 h-11 rounded-full bg-white border border-brand-green/20 text-brand-green hover:bg-brand-green hover:text-white transition-all shadow-sm flex items-center justify-center cursor-pointer">
+                            <i class="fas fa-chevron-right text-sm"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Carrossel com Rolagem Lateral -->
+            <div id="google-reviews-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 pt-2 select-none" style="scrollbar-width: none; -ms-overflow-style: none;">
                 
-                <div class="bg-white border border-brand-green/10 rounded-2xl p-8 shadow-[0_4px_25px_rgba(42,74,53,0.06)] flex flex-col hover:shadow-md transition-shadow">
-                    <div class="text-brand-gold text-sm mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <!-- Card 1: Faiz Odontologia -->
+                <div class="snap-start shrink-0 w-[310px] sm:w-[380px] bg-white border border-brand-green/15 rounded-2xl p-6 shadow-[0_4px_20px_rgba(42,74,53,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-[#E8F0FE] text-[#1967D2] font-bold flex items-center justify-center text-sm shrink-0 border border-[#D2E3FC]">
+                                    FO
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-brand-green leading-snug">Faiz Odontologia</h4>
+                                    <span class="text-xs text-brand-text/75 font-normal">1 avaliação · 2 fotos · um mês atrás</span>
+                                </div>
+                            </div>
+                            <i class="fab fa-google text-gray-400 text-base"></i>
+                        </div>
+                        <div class="flex text-[#F59E0B] text-xs gap-0.5 mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-text font-normal leading-relaxed mb-4">
+                            "Lugar incrível! As orquídeas são lindas, muito bem cuidadas e saudáveis. O atendimento é ótimo e nota-se o amor pelo que a Valéria faz. Super recomendo."
+                        </p>
+                        <!-- Fotos enviadas pelo cliente -->
+                        <div class="flex gap-2 mb-4">
+                            <div class="w-16 h-16 rounded-lg overflow-hidden border border-brand-green/10 shadow-sm shrink-0">
+                                <img src="https://gzr-dex.github.io/orquidario-cantareira-preview/assets/images/orchid_hero.jpg" alt="Foto da avaliação" class="w-full h-full object-cover" />
+                            </div>
+                            <div class="w-16 h-16 rounded-lg overflow-hidden border border-brand-green/10 shadow-sm shrink-0">
+                                <img src="https://gzr-dex.github.io/orquidario-cantareira-preview/assets/images/orchid_vanilla.jpg" alt="Foto da avaliação" class="w-full h-full object-cover" />
+                            </div>
+                        </div>
                     </div>
-                    <p class="text-brand-text text-base font-normal leading-relaxed mb-6">
-                        "Minha orquídea chegou com três botões perfeitos e floresceu logo na primeira semana. A embalagem é impressionante, nenhum dano no transporte."
-                    </p>
-                    <div class="mt-auto">
-                        <h4 class="font-serif text-brand-green font-bold text-base">Helena Ribeiro</h4>
-                        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider block mt-0.5">São Paulo, SP</span>
+                    <div class="flex items-center gap-1.5 text-xs text-brand-green font-semibold pt-3 border-t border-brand-green/10">
+                        <i class="fas fa-check-circle text-brand-green"></i>
+                        <span>Avaliação postada no Google</span>
                     </div>
                 </div>
 
-                <div class="bg-white border border-brand-green/10 rounded-2xl p-8 shadow-[0_4px_25px_rgba(42,74,53,0.06)] flex flex-col hover:shadow-md transition-shadow">
-                    <div class="text-brand-gold text-sm mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <!-- Card 2: Pós Venda -->
+                <div class="snap-start shrink-0 w-[310px] sm:w-[380px] bg-white border border-brand-green/15 rounded-2xl p-6 shadow-[0_4px_20px_rgba(42,74,53,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-[#E6F4EA] text-[#137333] font-bold flex items-center justify-center text-sm shrink-0 border border-[#CEEAD6]">
+                                    PV
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-brand-green leading-snug">Pós Venda</h4>
+                                    <span class="text-xs text-brand-text/75 font-normal">1 avaliação · 2 meses atrás</span>
+                                </div>
+                            </div>
+                            <i class="fab fa-google text-gray-400 text-base"></i>
+                        </div>
+                        <div class="flex text-[#F59E0B] text-xs gap-0.5 mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-text font-normal leading-relaxed mb-4">
+                            "Excelente loja! As orquídeas são lindas e de ótima qualidade, muito bem cuidadas e com bastante variedade. O atendimento também merece destaque, todos muito atenciosos, prestativos e educados."
+                        </p>
                     </div>
-                    <p class="text-brand-text text-base font-normal leading-relaxed mb-6">
-                        "O extrato de baunilha é de outro mundo. O perfume toma conta da cozinha inteira. Nunca mais uso essência artificial na vida."
-                    </p>
-                    <div class="mt-auto">
-                        <h4 class="font-serif text-brand-green font-bold text-base">Carlos Mendes</h4>
-                        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider block mt-0.5">Curitiba, PR</span>
+                    <div class="flex items-center gap-1.5 text-xs text-brand-green font-semibold pt-3 border-t border-brand-green/10">
+                        <i class="fas fa-check-circle text-brand-green"></i>
+                        <span>Avaliação postada no Google</span>
                     </div>
                 </div>
 
-                <div class="bg-white border border-brand-green/10 rounded-2xl p-8 shadow-[0_4px_25px_rgba(42,74,53,0.06)] flex flex-col hover:shadow-md transition-shadow">
-                    <div class="text-brand-gold text-sm mb-4">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <!-- Card 3: Helena Ribeiro -->
+                <div class="snap-start shrink-0 w-[310px] sm:w-[380px] bg-white border border-brand-green/15 rounded-2xl p-6 shadow-[0_4px_20px_rgba(42,74,53,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-[#FEF7E0] text-[#B06000] font-bold flex items-center justify-center text-sm shrink-0 border border-[#FEEFC3]">
+                                    HR
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-brand-green leading-snug">Helena Ribeiro</h4>
+                                    <span class="text-xs text-brand-text/75 font-normal">3 avaliações · 3 meses atrás</span>
+                                </div>
+                            </div>
+                            <i class="fab fa-google text-gray-400 text-base"></i>
+                        </div>
+                        <div class="flex text-[#F59E0B] text-xs gap-0.5 mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-text font-normal leading-relaxed mb-4">
+                            "Minha orquídea chegou com três botões perfeitos e floresceu logo na primeira semana. A embalagem especializada é impressionante, nenhum dano no transporte até São Paulo."
+                        </p>
                     </div>
-                    <p class="text-brand-text text-base font-normal leading-relaxed mb-6">
-                        "Ser assinante do Clube é meu momento preferido do mês. É uma alegria pura abrir a caixa surpresa com o cheiro da Serra."
-                    </p>
-                    <div class="mt-auto">
-                        <h4 class="font-serif text-brand-green font-bold text-base">Mariana Silveira</h4>
-                        <span class="text-xs font-semibold text-brand-gold uppercase tracking-wider block mt-0.5">Belo Horizonte, MG</span>
+                    <div class="flex items-center gap-1.5 text-xs text-brand-green font-semibold pt-3 border-t border-brand-green/10">
+                        <i class="fas fa-check-circle text-brand-green"></i>
+                        <span>Avaliação postada no Google</span>
+                    </div>
+                </div>
+
+                <!-- Card 4: Carlos Eduardo Mendes -->
+                <div class="snap-start shrink-0 w-[310px] sm:w-[380px] bg-white border border-brand-green/15 rounded-2xl p-6 shadow-[0_4px_20px_rgba(42,74,53,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-[#FCE8E6] text-[#C5221F] font-bold flex items-center justify-center text-sm shrink-0 border border-[#FAD2CF]">
+                                    CM
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-brand-green leading-snug">Carlos Eduardo Mendes</h4>
+                                    <span class="text-xs text-brand-text/75 font-normal">Local Guide · 14 avaliações · 4 meses atrás</span>
+                                </div>
+                            </div>
+                            <i class="fab fa-google text-gray-400 text-base"></i>
+                        </div>
+                        <div class="flex text-[#F59E0B] text-xs gap-0.5 mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-text font-normal leading-relaxed mb-4">
+                            "Um refúgio botânico de verdade na Cantareira. Fui pessoalmente conhecer o viveiro e fui recebido com muita atenção e conhecimento botânico. Plantas sadias e raras."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-1.5 text-xs text-brand-green font-semibold pt-3 border-t border-brand-green/10">
+                        <i class="fas fa-check-circle text-brand-green"></i>
+                        <span>Avaliação postada no Google</span>
+                    </div>
+                </div>
+
+                <!-- Card 5: Mariana Silveira -->
+                <div class="snap-start shrink-0 w-[310px] sm:w-[380px] bg-white border border-brand-green/15 rounded-2xl p-6 shadow-[0_4px_20px_rgba(42,74,53,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-[#F3E8FD] text-[#8430CE] font-bold flex items-center justify-center text-sm shrink-0 border border-[#E9D2FD]">
+                                    MS
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-brand-green leading-snug">Mariana Silveira</h4>
+                                    <span class="text-xs text-brand-text/75 font-normal">2 avaliações · 4 meses atrás</span>
+                                </div>
+                            </div>
+                            <i class="fab fa-google text-gray-400 text-base"></i>
+                        </div>
+                        <div class="flex text-[#F59E0B] text-xs gap-0.5 mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-text font-normal leading-relaxed mb-4">
+                            "Ser assinante do Clube é meu momento preferido do mês. É uma alegria pura abrir a caixa com o cheiro da Serra. O extrato de baunilha é de outro mundo!"
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-1.5 text-xs text-brand-green font-semibold pt-3 border-t border-brand-green/10">
+                        <i class="fas fa-check-circle text-brand-green"></i>
+                        <span>Avaliação postada no Google</span>
+                    </div>
+                </div>
+
+                <!-- Card 6: Beatriz Fontes -->
+                <div class="snap-start shrink-0 w-[310px] sm:w-[380px] bg-white border border-brand-green/15 rounded-2xl p-6 shadow-[0_4px_20px_rgba(42,74,53,0.06)] flex flex-col justify-between hover:shadow-md transition-all">
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-11 h-11 rounded-full bg-[#E0F2FE] text-[#0369A1] font-bold flex items-center justify-center text-sm shrink-0 border border-[#BAE6FD]">
+                                    BF
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-sm text-brand-green leading-snug">Beatriz Fontes</h4>
+                                    <span class="text-xs text-brand-text/75 font-normal">1 avaliação · 5 meses atrás</span>
+                                </div>
+                            </div>
+                            <i class="fab fa-google text-gray-400 text-base"></i>
+                        </div>
+                        <div class="flex text-[#F59E0B] text-xs gap-0.5 mb-3">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-sm text-brand-text font-normal leading-relaxed mb-4">
+                            "Comprei mudas de Vanilla planifolia e recebi todo o suporte de cultivo pelo WhatsApp com a Valéria. Dá para sentir o respeito e a dedicação que eles têm com a natureza."
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-1.5 text-xs text-brand-green font-semibold pt-3 border-t border-brand-green/10">
+                        <i class="fas fa-check-circle text-brand-green"></i>
+                        <span>Avaliação postada no Google</span>
                     </div>
                 </div>
 
             </div>
+
+            <!-- Botão de Ação para ver ficha no Google -->
+            <div class="mt-8 text-center">
+                <a href="https://maps.google.com/?q=Orquidario+Cantareira+Mairipora" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white hover:bg-brand-green border border-brand-green/20 text-brand-green hover:text-white font-bold text-xs uppercase tracking-wider px-6 py-3 rounded-full transition-all shadow-sm">
+                    <i class="fab fa-google"></i>
+                    <span>Ver todas as 66 avaliações no Google Maps</span>
+                    <i class="fas fa-external-link-alt text-[10px] ml-1"></i>
+                </a>
+            </div>
+
         </div>
       </section>
+
+      <script>
+      (function() {
+          const slider = document.getElementById('google-reviews-slider');
+          const prevBtn = document.getElementById('google-reviews-prev');
+          const nextBtn = document.getElementById('google-reviews-next');
+          
+          if (!slider || !prevBtn || !nextBtn) return;
+          
+          const scrollStep = 390;
+          
+          prevBtn.addEventListener('click', function() {
+              slider.scrollBy({ left: -scrollStep, behavior: 'smooth' });
+          });
+          
+          nextBtn.addEventListener('click', function() {
+              slider.scrollBy({ left: scrollStep, behavior: 'smooth' });
+          });
+      })();
+      </script>
 
 
       <!-- ==========================================
