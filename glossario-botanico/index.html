@@ -7,7 +7,7 @@
 
     <title>Glossário Botânico | Orquidário Cantareira</title>
 <meta name="robots" content="noindex, nofollow">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Lato:wght@400;700;900&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <link rel="stylesheet" href="https://gzr-dex.github.io/orquidario-cantareira-preview/style.css">
 <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
@@ -20,7 +20,7 @@
       --color-brand-lightbg: #FFFFFF;
       --color-brand-footerbg: #213A29;
       --font-serif: "Playfair Display", serif;
-      --font-sans: "Lato", sans-serif;
+      --font-sans: "Inter", "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       --animate-woo-sun-ray: woo-sun-ray-pass 2.5s infinite linear;
       @keyframes woo-sun-ray-pass {
         0% { transform: translateX(-250%) skewX(-25deg); opacity: 0.8; }
@@ -28,7 +28,8 @@
       }
     }
     :root { background-color: var(--color-brand-bg); color: var(--color-brand-text); }
-    body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; background-color: var(--color-brand-bg); color: var(--color-brand-text); }
+    body { font-family: var(--font-sans); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; background-color: var(--color-brand-bg); color: #1F2937; font-weight: 500; }
+    p { color: #1F2937; font-weight: 500; }
     /* Glassmorphism Containers */
 .woocommerce-cart .woocommerce,
 .woocommerce-checkout .woocommerce {
@@ -491,7 +492,7 @@
         <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/" class="flex items-center gap-3.5 hover:opacity-85 transition-opacity group">
           <img src="https://gzr-dex.github.io/orquidario-cantareira-preview/assets/images/logo.jpg" alt="Orquidário Cantareira" class="w-14 h-14 rounded-full object-cover shadow-sm border border-brand-gold/30 group-hover:scale-105 transition-transform" />          <div class="hidden sm:flex flex-col justify-center">
               <span class="font-serif text-2xl lg:text-[1.65rem] font-bold text-brand-green leading-none">Orquidário</span>
-              <span class="font-sans text-[11px] font-semibold tracking-[0.20em] text-brand-gold uppercase mt-1">Cantareira</span>
+              <span class="font-sans text-[12px] font-bold tracking-[0.25em] text-brand-gold uppercase mt-1">Cantareira</span>
           </div>
         </a>
       </div>
@@ -522,11 +523,11 @@
               <ul class="flex flex-col space-y-3 font-sans text-sm font-semibold text-brand-text">
                 <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=mudas-vanilla" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
                     <span class="block text-brand-green font-bold">Mudas de Vanilla</span>
-                    <span class="block text-xs text-brand-text/80 font-normal mt-0.5">Cultive sua própria baunilha</span>
+                    <span class="block text-xs text-[#4B5563] font-medium mt-0.5">Cultive sua própria baunilha</span>
                 </a></li>
                 <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
                     <span class="block text-brand-green font-bold">Guias de Cultivo</span>
-                    <span class="block text-xs text-brand-text/80 font-normal mt-0.5">Aprenda com especialistas</span>
+                    <span class="block text-xs text-[#4B5563] font-medium mt-0.5">Aprenda com especialistas</span>
                 </a></li>
               </ul>
             </div>
@@ -549,11 +550,11 @@
               <ul class="flex flex-col space-y-3 font-sans text-sm font-semibold text-brand-text">
                 <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
                     <span class="block text-brand-green font-bold">Descubra o Clube</span>
-                    <span class="block text-xs text-brand-text/80 font-normal mt-0.5">Como funciona a assinatura</span>
+                    <span class="block text-xs text-[#4B5563] font-medium mt-0.5">Como funciona a assinatura</span>
                 </a></li>
                 <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/#planos" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
                     <span class="block text-brand-green font-bold">Conheça os Planos</span>
-                    <span class="block text-xs text-brand-text/80 font-normal mt-0.5">A partir de R$ 100 mensais</span>
+                    <span class="block text-xs text-[#4B5563] font-medium mt-0.5">A partir de R$ 100 mensais</span>
                 </a></li>
               </ul>
             </div>
@@ -789,7 +790,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Envios para todo o Brasil</h4>
-            <p class="text-xs md:text-[13px] font-medium text-brand-text mt-1 leading-snug">Embalagem especializada para plantas vivas.</p>
+            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Embalagem especializada para plantas vivas.</p>
           </div>
         </div>
 
@@ -799,7 +800,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Embalagem Cuidadosa</h4>
-            <p class="text-xs md:text-[13px] font-medium text-brand-text mt-1 leading-snug">Raízes protegidas e hidratação garantida.</p>
+            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Raízes protegidas e hidratação garantida.</p>
           </div>
         </div>
 
@@ -809,7 +810,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Plantas Selecionadas</h4>
-            <p class="text-xs md:text-[13px] font-medium text-brand-text mt-1 leading-snug">Espécimes saudáveis e com procedência botânica.</p>
+            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Espécimes saudáveis e com procedência botânica.</p>
           </div>
         </div>
 
@@ -819,7 +820,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Atendimento Próximo</h4>
-            <p class="text-xs md:text-[13px] font-medium text-brand-text mt-1 leading-snug">Suporte direto pelo WhatsApp antes e após o plantio.</p>
+            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Suporte direto pelo WhatsApp antes e após o plantio.</p>
           </div>
         </div>
 
@@ -829,7 +830,7 @@
           </div>
           <div>
             <h4 class="text-xs md:text-sm font-bold text-brand-green uppercase tracking-wider">Compra Segura</h4>
-            <p class="text-xs md:text-[13px] font-medium text-brand-text mt-1 leading-snug">Pagamento protegido e garantia de entrega viva.</p>
+            <p class="text-xs md:text-[13px] font-semibold text-[#1F2937] mt-1 leading-snug">Pagamento protegido e garantia de entrega viva.</p>
           </div>
         </div>
 
@@ -844,11 +845,11 @@
         <div class="max-w-xl text-center lg:text-left">
           <span class="text-[#E8DCC4] text-xs uppercase tracking-[0.25em] font-bold block mb-2">Comunidade Botânica</span>
           <h3 class="text-2xl md:text-3xl font-serif text-white font-bold mb-2">Receba as novidades da Serra</h3>
-          <p class="text-sm text-white/90 leading-relaxed font-normal">Novas plantas, florações raras, lançamentos gastronômicos e histórias do viveiro direto no seu e-mail.</p>
+          <p class="text-sm text-white font-medium leading-relaxed">Novas plantas, florações raras, lançamentos gastronômicos e histórias do viveiro direto no seu e-mail.</p>
         </div>
         
         <form action="#" method="post" class="flex flex-col sm:flex-row w-full lg:w-auto gap-2.5">
-          <input type="email" placeholder="Digite seu melhor e-mail" required class="px-4 py-3.5 bg-white text-brand-text placeholder-gray-500 rounded-lg text-sm w-full sm:w-80 focus:outline-none focus:ring-2 focus:ring-brand-gold shadow-sm font-medium" />
+          <input type="email" placeholder="Digite seu melhor e-mail" required class="px-4 py-3.5 bg-white text-[#1F2937] placeholder-gray-500 rounded-lg text-sm w-full sm:w-80 focus:outline-none focus:ring-2 focus:ring-brand-gold shadow-sm font-semibold" />
           <button type="submit" class="bg-brand-gold hover:bg-white text-white hover:text-brand-green font-bold text-xs uppercase tracking-widest px-7 py-3.5 rounded-lg transition-all shadow-md cursor-pointer shrink-0">Cadastrar</button>
         </form>
       </div>
@@ -860,9 +861,9 @@
         <div>
           <div class="flex items-center gap-3 mb-6">
             <span class="font-serif text-2xl font-bold text-white">Orquidário</span>
-            <span class="font-sans text-xs tracking-[0.25em] text-[#E8DCC4] uppercase font-semibold">Cantareira</span>
+            <span class="font-sans text-xs tracking-[0.25em] text-[#E8DCC4] uppercase font-bold">Cantareira</span>
           </div>
-          <p class="text-sm text-white/90 leading-relaxed mb-6 font-normal">
+          <p class="text-sm text-white font-medium leading-relaxed mb-6">
             Mais que plantas, cultivamos conexões. Um refúgio botânico dedicado a orquídeas raras, baunilhas de verdade e aromas para pequenos rituais.
           </p>
           <div class="flex items-center gap-3">
@@ -875,20 +876,20 @@
         <!-- Coluna 2: Coleções & Universos -->
         <div>
           <h4 class="font-serif text-white font-bold text-lg mb-5 pb-2 border-b border-white/15">Coleções</h4>
-          <ul class="flex flex-col space-y-2 text-sm text-white/90 font-normal">
+          <ul class="flex flex-col space-y-2 text-sm text-white font-medium">
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-botanica" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Coleção Botânica</a></li>
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=sabores-da-serra" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Baunilhas da Serra</a></li>
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=aromas-da-serra" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Aromas da Serra</a></li>
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cultivo-insumos" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Cultivo & Insumos</a></li>
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-orquidario" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Coleção Orquidário</a></li>
-            <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="text-[#E8DCC4] font-semibold hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Clube do Orquidário</a></li>
+            <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="text-[#E8DCC4] font-bold hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Clube do Orquidário</a></li>
           </ul>
         </div>
 
         <!-- Coluna 3: Conhecimento & Histórias -->
         <div>
           <h4 class="font-serif text-white font-bold text-lg mb-5 pb-2 border-b border-white/15">Aprenda & Conheça</h4>
-          <ul class="flex flex-col space-y-2 text-sm text-white/90 font-normal">
+          <ul class="flex flex-col space-y-2 text-sm text-white font-medium">
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Jardim do Conhecimento</a></li>
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/glossario-botanico/" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Glossário Botânico</a></li>
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/nossa-historia/" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Nossa História</a></li>
@@ -899,7 +900,7 @@
         <!-- Coluna 4: Atendimento & Informações Legais -->
         <div>
           <h4 class="font-serif text-white font-bold text-lg mb-5 pb-2 border-b border-white/15">Serviço & Suporte</h4>
-          <ul class="flex flex-col space-y-2 text-sm text-white/90 font-normal">
+          <ul class="flex flex-col space-y-2 text-sm text-white font-medium">
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/contato/" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Fale Conosco</a></li>
             <li><a href="https://wa.me/5511921899009?text=Ol%C3%A1%2C%20preciso%20de%20ajuda%20com%20um%20pedido." target="_blank" rel="noopener noreferrer" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Atendimento WhatsApp</a></li>
             <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/perguntas-frequentes/" class="hover:text-white hover:underline underline-offset-4 transition-colors py-0.5 block">Dúvidas Frequentes (FAQ)</a></li>
@@ -913,7 +914,7 @@
       </div>
 
       <!-- Copyright e créditos -->
-      <div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-white/80 font-medium gap-4">
+      <div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-white font-semibold gap-4">
         <p>&copy; 2026 Orquidário Cantareira. Todos os direitos reservados.</p>
         <div class="flex items-center gap-6">
           <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/" class="hover:text-white hover:underline underline-offset-4 transition-colors">Minha Conta</a>
