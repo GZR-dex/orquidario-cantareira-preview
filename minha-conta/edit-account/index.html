@@ -9,7 +9,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Lato:wght@400;700;900&display=swap">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<link rel="stylesheet" href="https://gzr-dex.github.io/orquidario-cantareira-preview/style.css?v=1793896138">
+<link rel="stylesheet" href="https://gzr-dex.github.io/orquidario-cantareira-preview/style.css?v=1793896878">
 <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 <style type="text/tailwindcss">
     @theme {
@@ -494,83 +494,101 @@
     </div>
 
     <header class="w-full bg-white/95 backdrop-blur-md border-b border-brand-green/15 shadow-[0_2px_15px_rgba(0,0,0,0.04)] sticky top-0 z-50 transition-colors duration-300">
-      <div class="max-w-[1536px] mx-auto px-3 sm:px-4 xl:px-4 2xl:px-8 py-3 flex justify-between items-center w-full">
+      <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex justify-between items-center w-full">
       <div class="flex items-center shrink-0">
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/" class="flex items-center gap-2 xl:gap-2.5 hover:opacity-85 transition-opacity group">
-          <img src="https://gzr-dex.github.io/orquidario-cantareira-preview/assets/images/logo.jpg" alt="Orquidário Cantareira" class="w-10 h-10 sm:w-11 sm:h-11 xl:w-11 xl:h-11 2xl:w-13 2xl:h-13 rounded-full object-cover shadow-sm border border-brand-gold/30 group-hover:scale-105 transition-transform shrink-0" />          <div class="hidden sm:flex flex-col justify-center">
-              <span class="font-serif text-lg xl:text-xl 2xl:text-2xl font-bold text-brand-green leading-none">Orquidário</span>
-              <span class="font-sans text-[10px] xl:text-[10.5px] 2xl:text-[12px] font-bold tracking-[0.2em] text-[#725A2F] uppercase mt-0.5">Cantareira</span>
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/" class="flex items-center gap-3.5 hover:opacity-85 transition-opacity group">
+          <img src="https://gzr-dex.github.io/orquidario-cantareira-preview/assets/images/logo.jpg" alt="Orquidário Cantareira" class="w-12 h-12 lg:w-14 lg:h-14 rounded-full object-cover shadow-sm border border-brand-gold/30 group-hover:scale-105 transition-transform" />          <div class="hidden sm:flex flex-col justify-center">
+              <span class="font-serif text-2xl lg:text-[1.65rem] font-bold text-brand-green leading-none">Orquidário</span>
+              <span class="font-sans text-[12px] font-bold tracking-[0.25em] text-[#725A2F] uppercase mt-1">Cantareira</span>
           </div>
         </a>
       </div>
       
-      <!-- 8 Links de Navegação Direta para Máxima Descoberta -->
-      <nav class="hidden xl:flex items-center gap-1.5 min-[1366px]:gap-2 min-[1440px]:gap-3 2xl:gap-5 text-[10.5px] min-[1366px]:text-[11.5px] min-[1440px]:text-[12px] 2xl:text-[13.5px] font-bold uppercase tracking-tight min-[1440px]:tracking-normal 2xl:tracking-[0.03em] text-brand-green whitespace-nowrap">
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-botanica" class="hover:text-[#7D6336] transition-colors py-2">Coleção Botânica</a>
-        
-        <!-- Baunilhas da Serra (com Dropdown Gastronômico) -->
-        <div class="group relative py-2">
-          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=sabores-da-serra" class="hover:text-[#7D6336] transition-colors flex items-center gap-1 cursor-pointer">
-            Baunilhas da Serra
-            <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+      <!-- 4 Pilares Nobres (Padrão Boutique de Luxo) -->
+      <nav class="hidden lg:flex items-center gap-5 xl:gap-8 2xl:gap-10 text-[12.5px] xl:text-[13.5px] 2xl:text-[14px] font-bold uppercase tracking-[0.06em] text-brand-green whitespace-nowrap">
+        <!-- Pilar 1: Coleções da Serra (Mega Menu de 2 Colunas) -->
+        <div class="group relative py-3">
+          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-botanica" class="hover:text-[#7D6336] transition-colors flex items-center gap-1.5 cursor-pointer">
+            Coleções da Serra
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
           </a>
           
-          <!-- Mega Menu Panel - Baunilhas da Serra -->
-          <div class="absolute top-full left-1/2 -translate-x-1/2 w-[560px] bg-white border border-brand-green/15 shadow-[0_20px_50px_rgba(0,0,0,0.12)] rounded-2xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2 gap-6 z-50">
-            <div class="flex flex-col space-y-3">
-              <h4 class="font-sans text-brand-green font-bold text-xs uppercase tracking-wider border-b border-brand-green/15 pb-2">Gastronomia & Bem-estar</h4>
-              <ul class="flex flex-col space-y-2 font-sans text-sm font-semibold text-brand-text">
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=favas-extratos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Favas & Extratos</span> <span class="text-[10px] font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Culinária</span></a></li>
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=acucar-pos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Açúcar & Pós</span> <span class="text-[10px] font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Culinária</span></a></li>
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=velas-incensos" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Velas & Incensos</span> <span class="text-[10px] font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Aromas</span></a></li>
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cuidados-sabonetes" class="hover:text-brand-green transition-colors flex justify-between items-center"><span class="text-brand-text hover:text-brand-green">Sabonetes & Hidratantes</span> <span class="text-[10px] font-bold uppercase tracking-wider text-brand-green bg-brand-green/10 px-2 py-0.5 rounded">Cuidados</span></a></li>
+          <!-- Mega Menu Panel: Coleções da Serra -->
+          <div class="absolute top-full left-0 w-[600px] bg-white border border-brand-green/15 shadow-[0_20px_50px_rgba(0,0,0,0.12)] rounded-2xl p-7 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2 gap-7 z-50">
+            <div class="flex flex-col space-y-3.5">
+              <h4 class="font-sans text-brand-green font-bold text-xs uppercase tracking-wider border-b border-brand-green/15 pb-2">Orquídeas & Cultivo</h4>
+              <ul class="flex flex-col space-y-2 font-sans text-sm font-semibold">
+                <li>
+                  <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-botanica" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
+                    <span class="block text-brand-green font-bold">Coleção Botânica</span>
+                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Espécies nobres e raridades botânicas</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-orquidario" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
+                    <span class="block text-brand-green font-bold">Coleção Orquidário</span>
+                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Híbridos selecionados e florações</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cultivo-insumos" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
+                    <span class="block text-brand-green font-bold">Cultivo & Insumos</span>
+                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Substratos especiais, adubos e vasos</span>
+                  </a>
+                </li>
               </ul>
             </div>
             
-            <div class="flex flex-col space-y-3">
-              <h4 class="font-sans text-brand-green font-bold text-xs uppercase tracking-wider border-b border-brand-green/15 pb-2">Botânica</h4>
-              <ul class="flex flex-col space-y-2 font-sans text-sm font-semibold text-brand-text">
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=mudas-vanilla" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
-                    <span class="block text-brand-green font-bold">Mudas de Vanilla</span>
-                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Cultive sua própria baunilha</span>
-                </a></li>
-                <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
-                    <span class="block text-brand-green font-bold">Guias de Cultivo</span>
-                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Aprenda com especialistas</span>
-                </a></li>
+            <div class="flex flex-col space-y-3.5">
+              <h4 class="font-sans text-brand-green font-bold text-xs uppercase tracking-wider border-b border-brand-green/15 pb-2">Baunilhas & Aromas</h4>
+              <ul class="flex flex-col space-y-2 font-sans text-sm font-semibold">
+                <li>
+                  <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=sabores-da-serra" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
+                    <span class="block text-brand-green font-bold">Baunilhas da Serra</span>
+                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Favas puras, extratos e açúcar de baunilha</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=aromas-da-serra" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
+                    <span class="block text-brand-green font-bold">Aromas da Serra</span>
+                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Velas botânicas, incensos e sabonetes</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
+                    <span class="block text-[#7D6336] font-bold">Guias de Cultivo</span>
+                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Dicas técnicas com especialistas</span>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
 
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=aromas-da-serra" class="hover:text-[#7D6336] transition-colors py-2">Aromas da Serra</a>
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cultivo-insumos" class="hover:text-[#7D6336] transition-colors py-2">Cultivo & Insumos</a>
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-orquidario" class="hover:text-[#7D6336] transition-colors py-2">Coleção Orquidário</a>
-        
-        <!-- Clube do Orquidário (com Dropdown de Planos e Assinante) -->
-        <div class="group relative py-2">
-          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="hover:text-[#7D6336] transition-colors flex items-center gap-1 cursor-pointer">
+        <!-- Pilar 2: Clube do Orquidário (Dropdown) -->
+        <div class="group relative py-3">
+          <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="hover:text-[#7D6336] transition-colors flex items-center gap-1.5 cursor-pointer">
             Clube do Orquidário
-            <svg class="w-3 h-3 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+            <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.2" d="M19 9l-7 7-7-7"></path></svg>
           </a>
           
-          <!-- Mega Menu Panel - Clube (abertura segura à direita) -->
-          <div class="absolute top-full -right-10 w-[520px] bg-white border border-brand-green/15 shadow-[0_20px_50px_rgba(0,0,0,0.12)] rounded-2xl p-6 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2 gap-6 z-50">
-            <div class="flex flex-col space-y-3">
+          <!-- Mega Menu Panel - Clube -->
+          <div class="absolute top-full left-1/2 -translate-x-1/2 w-[540px] bg-white border border-brand-green/15 shadow-[0_20px_50px_rgba(0,0,0,0.12)] rounded-2xl p-7 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 grid grid-cols-2 gap-7 z-50">
+            <div class="flex flex-col space-y-3.5">
               <h4 class="font-sans text-brand-green font-bold text-xs uppercase tracking-wider border-b border-brand-green/15 pb-2">A Experiência</h4>
-              <ul class="flex flex-col space-y-2 font-sans text-sm font-semibold text-brand-text">
+              <ul class="flex flex-col space-y-2 font-sans text-sm font-semibold">
                 <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
                     <span class="block text-brand-green font-bold">Descubra o Clube</span>
-                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">Como funciona a assinatura</span>
+                    <span class="block text-xs text-[#4B5563] font-medium mt-0.5 normal-case">Como funciona a assinatura</span>
                 </a></li>
                 <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/#planos" class="hover:text-brand-green transition-colors block p-2 rounded-lg hover:bg-brand-bg/60">
                     <span class="block text-brand-green font-bold">Conheça os Planos</span>
-                    <span class="block text-xs text-[#4B5563] font-normal mt-0.5 normal-case">A partir de R$ 100 mensais</span>
+                    <span class="block text-xs text-[#4B5563] font-medium mt-0.5 normal-case">A partir de R$ 100 mensais</span>
                 </a></li>
               </ul>
             </div>
             
-            <div class="flex flex-col space-y-3">
+            <div class="flex flex-col space-y-3.5">
               <h4 class="font-sans text-brand-green font-bold text-xs uppercase tracking-wider border-b border-brand-green/15 pb-2">Área do Assinante</h4>
               <ul class="flex flex-col space-y-2 font-sans text-sm font-semibold text-brand-text">
                 <li><a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/minha-assinatura/" class="hover:text-brand-green transition-colors flex items-center gap-2 p-2 rounded-lg hover:bg-brand-bg/60">
@@ -590,15 +608,18 @@
           </div>
         </div>
 
+        <!-- Pilar 3: Jardim do Conhecimento -->
         <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-[#7D6336] transition-colors py-2">Jardim do Conhecimento</a>
+
+        <!-- Pilar 4: Sobre Nós -->
         <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/nossa-historia/" class="hover:text-[#7D6336] transition-colors py-2">Sobre Nós</a>
       </nav>
 
-      <div class="flex items-center space-x-1 xl:space-x-1.5 2xl:space-x-2 text-brand-green shrink-0">
+      <div class="flex items-center space-x-2 text-brand-green shrink-0">
         <!-- Search -->
         <div class="relative" id="search-container">
-          <button id="search-btn-toggle" aria-label="Pesquisar no catálogo" aria-expanded="false" class="text-brand-green hover:text-[#7D6336] transition-colors focus:outline-none flex items-center justify-center w-9 h-9 xl:w-10 xl:h-10 p-2 rounded-full cursor-pointer">
-            <svg class="w-4 h-4 xl:w-5 xl:h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <button id="search-btn-toggle" aria-label="Pesquisar no catálogo" aria-expanded="false" class="text-brand-green hover:text-[#7D6336] transition-colors focus:outline-none flex items-center justify-center w-11 h-11 p-2.5 rounded-full cursor-pointer">
+            <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
           </button>
           <div id="search-dropdown" class="hidden absolute right-0 top-full mt-3 w-80 bg-white border border-brand-green/20 shadow-[0_15px_40px_rgba(0,0,0,0.15)] rounded-2xl p-4 z-50">
             <form role="search" method="get" action="https://gzr-dex.github.io/orquidario-cantareira-preview/" class="flex items-center gap-2">
@@ -609,17 +630,17 @@
           </div>
         </div>
         <!-- Account -->
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/" aria-label="Minha Conta" class="w-9 h-9 xl:w-10 xl:h-10 flex items-center justify-center p-2 rounded-full hover:text-[#7D6336] transition-colors">
-          <svg class="w-4 h-4 xl:w-5 xl:h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/minha-conta/" aria-label="Minha Conta" class="w-11 h-11 flex items-center justify-center p-2.5 rounded-full hover:text-[#7D6336] transition-colors">
+          <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
         </a>
         <!-- Cart: Shopping Cart Icon -->
-        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/" aria-label="Carrinho de Compras" class="relative group w-9 h-9 xl:w-10 xl:h-10 flex items-center justify-center p-2 rounded-full hover:text-[#7D6336] transition-colors">
-          <svg class="w-4 h-4 xl:w-5 xl:h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+        <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/" aria-label="Carrinho de Compras" class="relative group w-11 h-11 flex items-center justify-center p-2.5 rounded-full hover:text-[#7D6336] transition-colors">
+          <svg class="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
           </svg>
                   </a>
-        <!-- Mobile Menu Toggle (visível abaixo de xl) -->
-        <button id="mobile-menu-toggle" class="xl:hidden w-10 h-10 flex flex-col justify-center items-center gap-1.5 cursor-pointer hover:text-[#7D6336] transition-colors p-2" aria-label="Abrir Menu Principal" aria-expanded="false">
+        <!-- Mobile Menu Toggle (visível abaixo de lg) -->
+        <button id="mobile-menu-toggle" class="lg:hidden w-11 h-11 flex flex-col justify-center items-center gap-1.5 cursor-pointer hover:text-[#7D6336] transition-colors p-2" aria-label="Abrir Menu Principal" aria-expanded="false">
           <span class="block w-6 h-[2px] bg-current rounded-full"></span>
           <span class="block w-6 h-[2px] bg-current rounded-full"></span>
           <span class="block w-6 h-[2px] bg-current rounded-full"></span>
@@ -628,17 +649,17 @@
       </div>
     </header>
 
-    <!-- Mobile Menu Panel (visível abaixo de xl) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-brand-bg/95 backdrop-blur-md md:backdrop-blur-3xl z-[100] transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center p-8 xl:hidden">
+    <!-- Mobile Menu Panel (visível abaixo de lg) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-brand-bg/95 backdrop-blur-md md:backdrop-blur-3xl z-[100] transform translate-x-full transition-transform duration-300 flex flex-col items-center justify-center p-8 lg:hidden">
         <button id="close-mobile-menu" class="absolute top-6 right-8 w-11 h-11 flex items-center justify-center text-brand-green hover:text-[#7D6336] transition-colors" aria-label="Fechar Menu">
             <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
         <nav class="flex flex-col space-y-5 text-center text-base font-bold uppercase tracking-wider text-brand-green">
             <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-botanica" class="hover:text-brand-gold transition-colors">Coleção Botânica</a>
+            <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-orquidario" class="hover:text-brand-gold transition-colors">Coleção Orquidário</a>
+            <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cultivo-insumos" class="hover:text-brand-gold transition-colors">Cultivo & Insumos</a>
             <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=sabores-da-serra" class="hover:text-brand-gold transition-colors">Baunilhas da Serra</a>
             <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=aromas-da-serra" class="hover:text-brand-gold transition-colors">Aromas da Serra</a>
-            <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=cultivo-insumos" class="hover:text-brand-gold transition-colors">Cultivo & Insumos</a>
-            <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/loja/?categoria=colecao-orquidario" class="hover:text-brand-gold transition-colors">Coleção Orquidário</a>
             <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/clube/" class="hover:text-brand-gold transition-colors">Clube do Orquidário</a>
             <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/jardim-do-conhecimento/" class="hover:text-brand-gold transition-colors">Jardim do Conhecimento</a>
             <a href="https://gzr-dex.github.io/orquidario-cantareira-preview/nossa-historia/" class="hover:text-brand-gold transition-colors">Sobre Nós</a>
